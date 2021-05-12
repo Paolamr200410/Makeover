@@ -1,0 +1,85 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+
+}
+
+html {
+    height: 100%
+}  
+
+body {
+	font-family: 'Barlow Semi Condensed'
+	font-size: 1.2rem;
+	min-height: 100%;
+	background: #999999%
+
+}
+
+.grid-container > * {
+	min-height: 100%
+	box-shadow: 1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+	border-radius: 4px;
+	padding: 10px;
+	text-align:  center;
+
+}
+
+.grid-container {
+	display: grid;
+	grid-gap: 10px;
+	grid-template: 
+	    "H" auto
+	    "N" auto
+	    "M" 15rem
+	    "A" auto
+	    "F" auto;
+}
+
+header {
+	grid-area: H;
+	background-color: #27AF8E;
+}
+
+nav {
+	grid-area: N;
+	background color: #ADEDD4;
+}
+
+section {
+	grid-area: M;
+	background-color:#E9F3F2;
+}
+aside {
+	grid-area: A;
+	background-color: #C6E8A6;
+}
+
+
+footer {
+	grid-area: F;
+	background-color:#E8D4A6;
+}
+
+@media (min-width: 640px) {
+	.grid-container {
+		grid-template:
+		"H H" 5rem
+		"N N" 2rem
+		"M A" auto
+		"F F" 3rem;
+	}
+}
+
+@media (min-width: 840px) {
+	.grid-container {
+		grid-template:
+		"H H H" 5rem
+		"N M A" auto
+		"F F F" 3rem;
+	}
+}
+/*-------------------
+ Por Paola Menéndez
+ --------------------*/
